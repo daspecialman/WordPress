@@ -1,0 +1,97 @@
+/* MailChimp for WP styles
+----------------------------------------------------------------- */
+form.mc4wp-form {
+	position:relative;
+	color: #ffffff;
+}
+form.mc4wp-form .mc4wp-form-fields input[type="email"] {
+	width: 100%;
+	vertical-align:top;
+	@include border-box;
+	background: transparent !important;
+	border-color: rgba(255,255,255,0.7);
+	@include border-radius(25px);
+	font-size: 16px;
+	text-align: left;
+	height: 46px;
+	@include box-sizing(border-box);
+}
+form.mc4wp-form .mc4wp-form-fields input[type="email"] {
+	width: calc(100% - 240px);
+	float: left;
+}
+.widget form.mc4wp-form .mc4wp-form-fields input[type="email"] {
+	width: 100%;
+	float: none;
+	text-align: center;
+}
+
+
+form.mc4wp-form input[type="email"]:active,
+form.mc4wp-form input[type="email"]:focus,
+form.mc4wp-form input[type="email"].filled {
+	border-color: rgba(255,255,255,1) !important;
+	color: #ffffff !important;
+}
+form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+	max-width: 214px;
+	width: 100%;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	margin: 0;
+	height: 46px;
+}
+.widget form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+	max-width:100%;
+	width: 100%;
+	margin-top: 10px;
+}
+
+
+
+form.mc4wp-form input[placeholder]::-webkit-input-placeholder { color: #ffffff; opacity: 1; }
+form.mc4wp-form input[placeholder]::-moz-placeholder { color: #ffffff; opacity: 1; }
+form.mc4wp-form input[placeholder]:-ms-input-placeholder { color: #ffffff; opacity: 1; }
+form.mc4wp-form input[placeholder]::placeholder { color: #ffffff; opacity: 1; }
+
+form.mc4wp-form .mc4wp-alert {
+	margin: 1em 0 0;
+	padding: 0.7em;
+	line-height:1.5em;
+	@include border-radius(3px);
+}
+form.mc4wp-form p {
+	margin: 0;
+}
+form.mc4wp-form p + p,
+form.mc4wp-form input + p {
+	margin-top: 1em;
+}
+form.mc4wp-form h3 {
+	color: #ffffff !important;
+	margin: 0 0 25px;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 1.1em;
+}
+.mc4wp-form-fields span {
+	margin-top: 20px;
+	display: inline-block;
+	opacity: 0.9;
+}
+.widget .mc4wp-form-fields span {
+	margin-top: 10px;
+}
+form.mc4wp-form span a {
+	color: #ffffff !important;
+	border-bottom: 1px solid #ffffff;
+	opacity: 1;
+	@include transition-all(0.3s);
+}
+form.mc4wp-form span a:hover {
+	color: #ffffff !important;
+	opacity: 0.8;
+}
+.mc4wp-form-fields span label {
+	text-align: left;
+}

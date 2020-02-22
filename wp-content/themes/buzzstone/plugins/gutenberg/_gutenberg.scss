@@ -1,0 +1,188 @@
+/* Gutenberg
+----------------------------------------------------------------- */
+
+body.sidebar_hide .alignfull {
+	width: 100vw;
+	max-width: none;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+body.sidebar_hide .alignwide {
+	position: relative;
+	left: calc( -44vw + 50% );
+	width: 88vw;
+	max-width: none;
+}
+.alignfull > img,
+.alignwide > img {
+	max-width: none;
+	width: 100%;
+}
+
+
+/* NEW */
+
+
+body .wp-block.editor-block-list__block {
+	max-width: 735px;
+}
+/* Width of "wide" blocks */
+body .wp-block.editor-block-list__block[data-align="wide"] {
+	max-width: 1080px;
+}
+/* Width of "full-wide" blocks */
+body .wp-block.editor-block-list__block[data-align="full"] {
+	max-width: none;
+}
+
+body.sidebar_hide .wp-block-cover.alignwide {
+	margin-bottom: 1em;
+}
+
+body.sidebar_hide .alignwide {
+	left: 0;
+	margin-left: 50%;
+	@include translateX(-50%);
+	width: $page;
+}
+body.sidebar_hide.expand_content .alignwide {
+	left: 0;
+	margin-left: 50%;
+	@include translateX(-50%);
+	width: calc(100% + 160px);
+}
+
+body .editor-block-list__block p {
+	font-size: 14px;
+}
+
+body .editor-block-list__block blockquote p {
+	font-size: 18px !important;
+	font-weight:600 !important;
+}
+
+body .editor-block-list__block .wp-block-pullquote blockquote .editor-rich-text__tinymce p {
+	font-size: 28px !important;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.wp-block.editor-block-list__block[data-align=full] {
+	max-width: none !important;
+}
+
+body .editor-block-list__block .wp-block-quote .wp-block-quote__citation,
+body .editor-block-list__block .wp-block-pullquote .wp-block-pullquote__citation{
+	font-size: 10px;
+	font-weight:600 !important;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	min-height: 1em;
+}
+
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: none;
+
+}
+
+
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+	border:none;
+	padding-left: 4em;
+}
+
+
+/* Colums */
+.wp-block-columns {
+	margin-right: -$grid_gap;
+}
+.wp-block-column {
+	@include box-sizing(border-box);
+	/*padding-right: $grid_gap;*/
+}
+
+
+/* Style bg */
+.style-bg {
+	position: relative;
+	display: block;
+	padding: 5.9em 0;
+}
+.style-bg:before {
+	content: '';
+	position: absolute;
+	left: -10000px;
+	right:-10000px;
+	top:0;
+	bottom: 0;
+	background: #ddd;
+	display: block;
+	z-index: 1;
+}
+.style-bg > * {
+	position: relative;
+	z-index: 2;
+}
+
+
+
+.style-bg-left {
+	position: relative;
+	display: block;
+	padding: 5.9em 0 5.2em 0;
+}
+.style-bg-left:before {
+	content: '';
+	position: absolute;
+	left: -10000px;
+	right: -100px;
+	top:0;
+	bottom: 0;
+	background: #ddd;
+	display: block;
+}
+
+
+.style-bg-top {
+	position: relative;
+	display: block;
+	padding: 6.4em 0 6.4em 0;
+}
+.style-bg-top:before {
+	content: '';
+	position: absolute;
+	left: -10000px;
+	right:-10000px;
+	top: 0;
+	bottom: 0;
+	background: #ddd;
+	display: block;
+	z-index: 0;
+}
+.style-bg-top > * {
+	position: relative;
+}
+
+
+.style-bg.padding {
+	padding: 6.4em 0 5.2em 0;
+}
+.style-bg.padding .extra_descr {
+	margin-bottom: 50px;
+}
+
+.style-bg.padding .wp-block-button {
+	margin: 1.6em 0 1.8em 0;
+}
+
+.wp-block-table {
+	width: 100%;
+}
+
+.editor-block-list__insertion-point-inserter .editor-inserter__toggle {
+	padding: 0;
+}
